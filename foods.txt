@@ -1,0 +1,17 @@
+# Veggies
+
+kale
+parsnips
+carrot
+
+# Fruits
+
+apple
+mango
+lime
+banana
+
+# Other
+
+taco
+pizza
