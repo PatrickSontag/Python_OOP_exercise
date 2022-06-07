@@ -23,5 +23,7 @@ class WordFinder:
     #     word_list = list(f)
     #     print(choice(word_list))
 
-# class SpeicalWordFinder(WordFinder):
+class SpecialWordFinder(WordFinder):
 
+    def taco(self):
+        return "taco"
