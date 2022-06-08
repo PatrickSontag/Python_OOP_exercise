@@ -2,12 +2,12 @@
 from random import choice
 
 class WordFinder:
-    ...
+    """find a random word from given file"""
 
     def __init__(self, path):
         self.path = path
-        self.file = open(self.path)
-        self.count = sum(1 for line in self.file)
+        file = open(self.path)
+        self.count = sum(1 for line in file)
         print(self.count, "words read")
 
     def random(self):
@@ -24,14 +24,12 @@ class WordFinder:
     #     print(choice(word_list))
 
 class SpecialWordFinder(WordFinder):
+    """finds random word from file, ignoring blank lines and lines starting with "#"."""
 
     def random(self):
         f = open(self.path)
         word_list = list(f)
-        option = choice(word_list)
-        # if option == "\n" or option.startswith("#"):
-        #     random()
-        # else:
-            # return option.rstrip('\n')
-        return [w.strip() for w in f 
-            if w.strip() and not w.startswith('#')]
+        for atmp in range(100):
+            option = choice(word_list)
+            if not option == "\n" and not option.startswith("#"):
+                return option.rstrip('\n')
