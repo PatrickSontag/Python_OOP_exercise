@@ -29,7 +29,9 @@ class SpecialWordFinder(WordFinder):
         f = open(self.path)
         word_list = list(f)
         option = choice(word_list)
-        if option == "\n" or option.startswith("#"):
-            print("starts with '\n' or #")
-        else:
-            print(option.rstrip('\n'))
+        # if option == "\n" or option.startswith("#"):
+        #     random()
+        # else:
+            # return option.rstrip('\n')
+        return [w.strip() for w in f 
+            if w.strip() and not w.startswith('#')]
