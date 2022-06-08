@@ -25,5 +25,11 @@ class WordFinder:
 
 class SpecialWordFinder(WordFinder):
 
-    def taco(self):
-        return "taco"
+    def random(self):
+        f = open(self.path)
+        word_list = list(f)
+        option = choice(word_list)
+        if option == "\n" or option.startswith("#"):
+            print("starts with '\n' or #")
+        else:
+            print(option.rstrip('\n'))
